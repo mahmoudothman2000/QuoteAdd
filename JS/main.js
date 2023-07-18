@@ -80,8 +80,7 @@ btn.onclick = function ()
 
 addBtn.onclick = function ()
 {
-  let regex = /^-[A-Z][a-z]{2,} [A-Z][a-z]{2,}-$/;
-  if ( regex.test( inputName.value ) )
+  if ( validateQuoteName () )
   {
     let newQuote = {
       name: inputName.value,
@@ -98,6 +97,13 @@ addBtn.onclick = function ()
     alert( `The User Name is Started Capital Character 
     Examp ==>  -Mahmoud Othman-` )
   }
+}
+
+
+function validateQuoteName ()
+{
+  let regex = /^-[A-Z][a-z]{2,} [A-Z][a-z]{2,}-$/;
+  return regex.test( inputName.value );
 }
 
 
