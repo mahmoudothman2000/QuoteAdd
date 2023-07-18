@@ -80,7 +80,7 @@ btn.onclick = function ()
 
 addBtn.onclick = function ()
 {
-  let regex = /^-[A-Z][a-z]{4,} [A-Z][a-z]{4,}-$/;
+  let regex = /^-[A-Z][a-z]{2,} [A-Z][a-z]{2,}-$/;
   if ( regex.test( inputName.value ) )
   {
     let newQuote = {
